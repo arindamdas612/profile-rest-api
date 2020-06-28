@@ -4,6 +4,7 @@ from profiles_api import views
 
 
 router = DefaultRouter()
+router.register('profile', views.UserProfileViewSet)
 router.register('hello-viewsets', views.HelloViewSet, base_name='hello-viewset')
 
 
