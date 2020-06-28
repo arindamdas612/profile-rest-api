@@ -12,7 +12,7 @@ class UserProfileManager(BaseUserManager):
         if not email:
             raise ValueError("Users must have an E-Mail Address")
 
-        email = self.normailze_email(email)
+        #email = self.normailze_email(email)
         user = self.model(email=email, name=name)
 
         user.set_password(password)
@@ -20,7 +20,7 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
-    def create_super_user(Self, email, name, password):
+    def create_superuser(self, email, name, password):
         """Create and save new Super user with given detils"""
         user = self.create_user(email, name, password)
         user.is_superuser = True

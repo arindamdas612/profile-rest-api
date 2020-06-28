@@ -12,6 +12,7 @@ __pycache__/
 
 id_rsa
 id_rsa.pub
+.vscode
 
 # Distribution / packaging
 .Python
